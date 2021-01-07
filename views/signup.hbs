@@ -1,0 +1,101 @@
+{{!-- <h1> Sign up page</h1>
+<div className="contact">
+    <div className="wrap-conatiner">
+        <form action="/signup" method="POST">
+            <span className="form-title">sign up!</span>
+            <div className="wrap-input">
+            <input id="userName" className="input" type="userName" name="userName" placeholder="Eg. Frankie123"/>
+            <span className="focus-input"></span>
+        </div>
+            <label className="label-input" for="firstName">Your name*</label>
+        <div className="wrap-input">
+            <input id="firstName" className="input" type="text" name="firstName" placeholder="First name"/>
+            <span className="focus-input"></span>
+        </div>
+         <div className="wrap-input">
+            <input id="lastName" className="input" type="text" name="lastName" placeholder="Last name"/>
+            <span className="focus-input"></span>
+        </div>
+        <label className="label-input" for="email">Email Address*</label>
+        <div className="wrap-input">
+            <input id="email" className="input" type="email" name="email" placeholder="Eg. example@email.com"/>
+            <span className="focus-input"></span>
+        </div>
+        <div className="wrap-input">
+            <input id="password" className="input" type="password" name="password" placeholder="Eg. password123"/>
+            <span className="focus-input"></span>
+        </div>
+        <div className="container-button">
+            <button className="buttons">
+            <span>"Submit"<i className="arrow-button"></i>
+            </span>
+        </button>
+        </div>
+    </form>
+</div>
+
+<p>{{err}}</p> --}}
+
+ <div class="custom-container">
+        <h1 class="text-center m-4 text-success">SIGN UP</h1>
+        <div class="jumbotron">
+            <h3 class="text-center text-primary">Registration Form</h3>
+            <br>
+             <h6 style="color:red">{{error}}</h6> 
+            {{!-- Display errors --}}
+            {{!-- if condition --}}
+             {{#if error}} 
+                {{!-- Foreach loop --}}
+                 {{#each error}} 
+                    {{!-- <div class="alert alert-danger alert-dismissible fade show">
+                        <strong>{{error}}</strong>
+                        <button class="close" data-dismiss="alert"><span>&times;</span></button>
+                    </div> --}}
+                    <div><p>{{error/_message}}</p></div>
+                 {{/each}} 
+                {{!-- End Foreach loop--}}
+             {{/if}} -
+            {{!-- End If Condition --}}
+            
+            <form method="post" id="registration" action="/user/registration">
+                <div class="form-group">
+                    <label for="fname">Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" value="{{name}}">
+                </div>
+                {{!-- <div class="form-group">
+                    <label for="mname">Middle Name</label>
+                    <input type="text" class="form-control" id="mname" name="mname" placeholder="Enter Your Middle Name" value="{{mname}}">
+                </div> --}}
+                <div class="form-group">
+                    <label for="Date of birth">Date of birth <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="dob" name="dob" max="2021-01-1"placeholder="Enter Your dob" value="{{dob}}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Id <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter your email id" value="{{email}}">
+                </div>
+                {{!-- <div class="form-group">
+                    <label for="mobile">Mobile Number <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="mobile" id="mobile" placeholder="Enter your Mobile Number" value="{{mobile}}">
+                </div> --}}
+                <div class="form-group">
+                    <label for="password">Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Enter Your Password"value="{{password}}">
+                </div>
+                {{!-- <div class="form-group">
+                    <label for="cpassword">Confirm Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Enter Same as Password" value="{{cpassword}}">
+                </div> --}}
+                <div class="form-group">
+                    <input type="submit" value="Register" class="btn btn-info btn-block">
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-8">
+                            Already user? Login <a href="/user/login">here</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,17 @@
+
+
+ <div style= "margin:20px" class="col-md-10 blogShort">
+     {{#each data}} 
+                      <h3>{{this.Titlt}}</h3>
+
+                     
+                     <img height="100px" width="50px" src="{{this.img.path}}">
+                     
+                        
+                     <article><p>
+                        {{this.content}}  
+                         </p></article>
+                    <em>{{this.date}}</em>
+                      {{/each}}
+                 </div>
+                

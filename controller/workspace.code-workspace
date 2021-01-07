@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../ms/crud"
+		},
+		{
+			"path": "../../ms/handlebar"
+		},
+		{
+			"path": "../../ms/hbs"
+		},
+		{
+			"path": "../../ms/ifileshare-main"
+		},
+		{
+			"path": "../../ms/validator"
+		},
+		{
+			"path": "../../Downloads/howtotech-master"
+		},
+		{
+			"path": "../../hrms"
+		},
+		{
+			"path": "../../Downloads/user-authentication-master"
+		},
+		{
+			"path": "../../Downloads/server-signup-master"
+		}
+	],
+	"settings": {}
+}

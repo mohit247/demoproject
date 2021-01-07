@@ -1,0 +1,23 @@
+{{!-- <form method="POST" action="/image/" enctype="multipart/form-data">
+    <div>
+        <label>Select your profile picture:</label>
+        <input type="file" name="image" />
+    </div>
+    <div>
+        <input type="submit" name="btn_upload_profile_pic" value="Upload" />
+    </div>
+</form> --}}
+
+<div>User List</div>
+<div>
+   
+    {{!-- {{data}} --}}
+      <ul>
+            {{#each data}}
+            <li>{{this.Title}}&nbsp; &nbsp;</li>
+            <img height ="100px" width="80px" src= {{this.img.path}}>
+            <article>{{this.content}}</article>
+            {{/each}}
+            
+      </ul>
+</div>
