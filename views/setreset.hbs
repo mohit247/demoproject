@@ -1,0 +1,13 @@
+<p>{{#if _id}}</p>
+<form style = "margin: 30px;"  name="createPostForm" action="user/resetpassword/{{_id}}" method="POST" >
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="text" class="form-control" name="password" placeholder="password" ng-required="true" 
+            value="{{password}}"/>
+		</div>
+        <div class="form-group">
+			<input type="submit" value="CHANGE PASSWORD" class="btn btn-primary" ng-disabled="createPostForm.$invalid" />
+		</div>
+         </form>
+{{/if}}
+   </div>    

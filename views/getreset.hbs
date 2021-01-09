@@ -1,0 +1,16 @@
+<div ng-app>
+	{{!-- <h2>{{error}}</h2> --}}
+   <h6 style="color:red">{{error}}</h6> 
+	<form style = "margin: 30px;"  name="createPostForm" action="/user/getreset" method= "get" >
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="text" class="form-control" name="email" placeholder="email" ng-required="true" 
+            value="{{email}}"/>
+		</div>
+        <div class="form-group">
+			<input type="submit" value="get" class="btn btn-primary" ng-disabled="createPostForm.$invalid" />
+		</div>
+         </form>
+
+
+   </div>    

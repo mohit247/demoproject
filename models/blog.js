@@ -23,7 +23,17 @@ const blogSchema = new schema({
         type: Date,
             default: Date.now
 
-    }
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+      },
+      comments: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Comment'
+        }
+      ]
   
 
 

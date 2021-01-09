@@ -1,6 +1,6 @@
 <div ng-app>
-	<h2>Create a post</h2>
-
+	<h2>{{error}}</h2>
+   <h6 style="color:red">{{error}}</h6> 
 	<form style = "margin: 30px;"  name="createPostForm" action="/blog/create" method="post" enctype="multipart/form-data">
 		<div class="form-group">
 			<label for="title">Title</label>

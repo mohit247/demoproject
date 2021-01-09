@@ -27,5 +27,12 @@ router.get('/login', user.getLogin)
 router.get('/profile', user.getProfile)
 router.get('/signup', user.getSignup)
 router.get('/getme', user.getLoggedInUser)
+router.delete('/deleteAll', user.deleteAll)
+router.put('/resetpassword/:id',user.resetpassword);
+router.get('/resetpassword/:id',user.getresetpassword);
+router.get('/getreset',user.getreset);
+router.get('/getresethbs',user.getresethbs);
+router.get('/setresethbs',user.setresethbs);
+
 
 module.exports = router;

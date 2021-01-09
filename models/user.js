@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-
+var uniqueValidator = require('mongoose-unique-validator')
 require('mongoose-type-email');
 
 const schema = mongoose.Schema;
@@ -18,7 +18,8 @@ const userSchema = new schema({
         email: {
             type: mongoose.SchemaTypes.Email,
             correctTld: true,
-            required: true
+            required: true,
+            unique: true
             
         },
         password: {
@@ -38,10 +39,18 @@ const userSchema = new schema({
                 type: String,
                 required: true
             }
-        }]
+        }],
+        blogs: [
+            {
+              type: mongoose.Schema.Types.ObjectId,
+              ref: 'Blog'
+            }
+          ],
 
 
 }, { timestamps: true});
+
+userSchema.plugin(uniqueValidator);
 
 userSchema.pre('save', async function (next) {
     // Hash the password before saving the user model
